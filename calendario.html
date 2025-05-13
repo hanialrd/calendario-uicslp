@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Define el tipo de documento como HTML5 -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página sea responsiva en dispositivos móviles -->
+    <title>Calendario Escolar</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="calendario.css"> <!-- Vincula el archivo CSS externo para los estilos -->
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Título principal del calendario -->
+        <div id="header-left">Calendario Escolar 2024-2025</div>
+        <!-- Imagen del logo de la escuela -->
+        <img src="IMG/logo.png" alt="Logo de la escuela" id="logo">
+    </header>
+    
+    <!-- Barra lateral con botones para navegación -->
+    <aside>
+        <!-- Botón para cambiar a la vista anual del calendario -->
+        <button id="view-year">Vista Anual</button>
+        <!-- Botón para consultar los horarios escolares -->
+        <button id="Horarios">Horarios</button>
+        <!-- Botón para acceder a las convocatorias de eventos -->
+        <button id="Convocatorias">Convocatorias</button>
+        <!-- Botón para visualizar anuncios importantes -->
+        <button id="Anuncios">Anuncios</button>
+        <!-- Botón para cerrar la sesión del usuario -->
+        <button id="logout">Cerrar sesión</button>
+    </aside>
+    
+    <!-- Sección principal donde se muestra el calendario -->
+    <main>
+        <div id="calendar-container"> <!-- Contenedor principal del calendario -->
+            <!-- Navegación del calendario (mes anterior, mes actual, mes siguiente) -->
+            <div id="month-navigation">
+                <!-- Botón para navegar al mes anterior -->
+                <button id="prev-month">◀</button>
+                <!-- Texto que muestra el mes y el año actual -->
+                <span id="month-year">Mes Año</span>
+                <!-- Botón para navegar al mes siguiente -->
+                <button id="next-month">▶</button>
+            </div>
+            <!-- Contenedor donde se generará el calendario dinámico -->
+            <div id="calendar"></div>
+        </div>
+    </main>
+
+    <!-- Enlace al archivo JavaScript que contiene la lógica de la página -->
+    <script src="calendario.js"></script>
+</body>
+</html>

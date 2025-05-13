@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Especifica el idioma de la página (español) -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hacer la página responsiva en dispositivos móviles -->
+    <title>Inicio de Sesión - Calendario Escolar</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.css"> <!-- Enlace al archivo CSS para estilos -->
+    <script src="index.js" defer></script> <!-- Enlace al archivo JavaScript (con defer para cargar después del HTML) -->
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header class="header">
+        <div class="header-left"> <!-- Contenedor para el título de la página -->
+            <h1 class="calendar-title">Calendario Escolar</h1> <!-- Título principal -->
+        </div>
+        <div class="header-right"> <!-- Contenedor para el logo -->
+            <img src="IMG/logo.png" alt="Logo de la escuela" class="logo"> <!-- Imagen del logo de la escuela -->
+        </div>
+    </header>
+
+    <!-- Contenedor para el formulario de inicio de sesión -->
+    <div class="login-container">
+        <form id="loginForm"> <!-- Formulario con id 'loginForm' -->
+            <h2>Inicio de Sesión</h2> <!-- Título del formulario -->
+            
+            <label for="username">Usuario:</label> <!-- Etiqueta para el campo de usuario -->
+            <input type="text" id="username" name="username" required> <!-- Campo de entrada para el nombre de usuario -->
+
+            <label for="password">Contraseña:</label> <!-- Etiqueta para el campo de contraseña -->
+            <input type="password" id="password" name="password" required> <!-- Campo de entrada para la contraseña -->
+
+            <button type="button" id="loginButton">Iniciar Sesión</button> <!-- Botón para enviar el formulario (tipo 'button' para evitar submit automático) -->
+            
+            <div class="options"> <!-- Contenedor para las opciones de recuperación de cuenta -->
+                <a href="#">¿Olvidaste tu contraseña?</a> | <!-- Enlace para recuperar contraseña -->
+                <a href="#">Crear cuenta</a> <!-- Enlace para crear una nueva cuenta -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>

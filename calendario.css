@@ -1,0 +1,174 @@
+/* Establece que todos los elementos usen el modelo de caja con border-box (para evitar que los márgenes y el padding afecten el tamaño total del elemento) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Usa la fuente Arial por defecto */
+    display: flex; /* Habilita el modelo Flexbox para una disposición flexible */
+    height: 100vh; /* Hace que el cuerpo ocupe el 100% de la altura de la ventana */
+    background-image: url('IMG/fondo-escuela.jpg'); /* Establece una imagen de fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra toda el área visible */
+    background-position: center; /* Centra la imagen de fondo */
+    display: flex; /* Se repite, pero se conserva para asegurar que el contenido se organiza con Flexbox */
+}
+
+/* Estilos del encabezado (header) */
+header {
+    font-weight: bold; /* Pone en negrita el texto dentro del encabezado */
+    width: 100%; /* El encabezado ocupa todo el ancho de la página */
+    background: linear-gradient(to right, #174675, white); /* Un degradado de color azul oscuro a blanco */
+    padding: 15px; /* Espaciado interno dentro del encabezado */
+    display: flex; /* Usamos Flexbox para colocar los elementos en línea */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos a los extremos */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Asegura que se quede en la parte superior */
+    left: 0; /* Asegura que se quede pegado al lado izquierdo */
+    z-index: 1; /* Asegura que el encabezado esté encima de otros elementos */
+}
+
+/* Estilos para el texto dentro del encabezado */
+#header-left {
+    color: #fff; /* El color del texto es blanco */
+    font-size: 24px; /* El tamaño de la fuente es 24px */
+}
+
+/* Estilos para el logo */
+#logo {
+    height: 50px; /* Define una altura fija para el logo */
+    width: auto; /* El ancho se ajusta proporcionalmente */
+}
+
+/* Estilos para la barra lateral (aside) */
+aside {
+    background-color: #e68223; /* Color de fondo naranja */
+    padding: 20px; /* Espaciado interno */
+    width: 200px; /* Ancho fijo de la barra lateral */
+    height: calc(100vh - 50px); /* Ocupa toda la altura de la ventana menos el espacio del encabezado */
+    position: fixed; /* Fija la barra lateral en su lugar */
+    top: 70px; /* Ajusta para que quede justo debajo del encabezado */
+    left: 0; /* Se queda pegada al lado izquierdo */
+    overflow-y: auto; /* Permite el desplazamiento vertical si es necesario */
+    display: flex; /* Usa Flexbox para organizar los botones */
+    flex-direction: column; /* Los elementos se alinean en una columna */
+    gap: 20px; /* Espaciado entre los botones */
+}
+
+/* Estilos para los botones en la barra lateral */
+aside button {
+    font-weight: bold; /* El texto en negrita */
+    background-color: #174675; /* Fondo azul para los botones */
+    color: #fff; /* El texto será blanco */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Los botones ocupan todo el ancho disponible */
+    border: none; /* Sin borde por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves para cambios de color y tamaño */
+}
+
+/* Efecto visual al presionar los botones */
+aside button:active {
+    background-color: #1a5a94; /* Cambio de color al presionar el botón */
+    transform: scale(0.98); /* Reducción de tamaño para efecto de "clic" */
+}
+
+/* Estilos específicos para el botón de logout */
+aside button#logout {
+    margin-top: 170px; /* Se separa el botón de logout del resto de los botones */
+    background-color: red; /* Fondo rojo para el botón de logout */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto visual al presionar el botón de logout */
+aside button#logout:active {
+    background-color: #ff4d4d; /* Cambio de color más claro al presionar */
+}
+
+/* Estilos para el contenedor principal (main) */
+main {
+    flex-grow: 1; /* El contenedor principal crece para ocupar el espacio disponible */
+    margin-left: 200px; /* Deja espacio a la izquierda para la barra lateral */
+    padding-top: 70px; /* Añade un margen superior para evitar que el contenido se solape con el encabezado */
+    display: flex; /* Usamos Flexbox para organizar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+}
+
+/* Estilos para el contenedor del calendario */
+#calendar-container {
+    margin-top: 20px; /* Deja un espacio arriba */
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    max-width: 800px; /* El ancho máximo es de 800px */
+    background-color: #f0f8ff; /* Fondo de color azul claro */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilos para la barra de navegación del mes (mes anterior, actual, siguiente) */
+#month-navigation {
+    display: flex; /* Usa Flexbox para alinear los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 10px; /* Espaciado entre los botones */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Pone el texto en negrita */
+    margin-bottom: 15px; /* Deja un espacio debajo */
+    background-color: #cce7ff; /* Fondo azul claro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative; /* Permite que las flechas se queden en su lugar */
+}
+
+/* Estilos para los botones de la barra de navegación del mes */
+#month-navigation button {
+    background: none; /* Sin fondo por defecto */
+    border: none; /* Sin borde */
+    font-size: 18px; /* Tamaño de la fuente de las flechas */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    padding: 0 10px; /* Añade espaciado en los lados */
+    font-weight: bold; /* Pone el texto en negrita */
+    color: #174675; /* Color azul para el texto */
+}
+
+/* Efecto al pasar el cursor sobre los botones de navegación del mes */
+#month-navigation button:hover {
+    color: #e68223; /* Cambia el color al naranja */
+}
+
+/* Estilos para el texto del mes/año en el centro de la barra de navegación */
+#month-navigation span {
+    flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para la cuadrícula del calendario */
+#calendar {
+    display: grid; /* Usa un grid para organizar los días */
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas, una para cada día de la semana */
+    gap: 5px; /* Espaciado entre los días */
+}
+
+/* Estilos para los días de la semana */
+#calendar .weekday {
+    font-weight: bold; /* Pone el texto en negrita */
+    text-align: center; /* Centra el texto */
+    padding: 11px 0; /* Altura compacta */
+    background-color: #cce7ff; /* Fondo azul claro */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para los días del mes */
+#calendar .day {
+    padding: 16px 0; /* Altura compacta */
+    text-align: center; /* Centra el texto */
+    border: 1px solid #ddd
+}

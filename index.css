@@ -1,0 +1,140 @@
+/* Reset de márgenes, padding y box-sizing para evitar inconsistencias entre navegadores */
+* {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    box-sizing: border-box; /* Incluir borde y padding en el tamaño total de los elementos */
+}
+
+/* Estilos generales para el body */
+body {
+    font-family: Arial, sans-serif; /* Fuente sans-serif para el texto */
+    background-image: url('IMG/fondo-escuela.jpg'); /* Imagen de fondo de la escuela */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    display: flex; /* Utiliza Flexbox para alinear el contenido */
+    flex-direction: column; /* Los elementos hijos se apilan en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: #174675; /* Color de texto azul oscuro */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Estilos para el encabezado */
+.header {
+    width: 100%; /* El encabezado ocupa todo el ancho */
+    background: linear-gradient(to right, #174675, white); /* Degradado de azul a blanco */
+    padding: 15px; /* Espaciado interno */
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil debajo del encabezado */
+}
+
+/* Estilos para la parte izquierda del encabezado */
+.header-left {
+    margin-left: 20px; /* Espaciado a la izquierda */
+}
+
+/* Estilos para el título del calendario */
+.calendar-title {
+    font-size: 24px; /* Tamaño de fuente grande */
+    color: rgb(255, 255, 255); /* Color blanco para el texto */
+}
+
+/* Estilos para la parte derecha del encabezado */
+.header-right {
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    margin-right: 20px; /* Espaciado a la derecha */
+}
+
+/* Estilos para el logo de la escuela */
+.logo {
+    width: 180px; /* Establece el ancho del logo */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+/* Estilos para el nombre de la escuela */
+.school-name {
+    font-size: 24px; /* Tamaño de fuente grande */
+    color: #174675; /* Color de texto azul oscuro */
+}
+
+/* Estilos para el contenedor de login */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 300px; /* Ancho fijo para el contenedor */
+    text-align: center; /* Centra el contenido del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor */
+    margin-top: 75px; /* Espaciado superior */
+}
+
+/* Estilos para el título del login */
+h2 {
+    color: #e68223; /* Color de texto anaranjado */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Estilos para las etiquetas de los campos de texto */
+label {
+    display: block; /* Muestra las etiquetas como bloques */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 10px 0 5px; /* Espaciado alrededor de las etiquetas */
+}
+
+/* Estilos para los campos de texto de usuario y contraseña */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Los campos ocupan todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado debajo de los campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #174675; /* Color de fondo azul oscuro */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre el botón */
+}
+
+/* Estilos para el estado hover del botón */
+button:hover {
+    background-color: #e68223; /* Cambia el color de fondo a naranja cuando se pasa el ratón */
+}
+
+/* Estilos para las opciones de login debajo del formulario */
+.options {
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilos para los enlaces dentro de las opciones */
+.options a {
+    color: #174675; /* Color de texto azul oscuro */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Estilos para los enlaces en estado hover */
+.options a:hover {
+    text-decoration: underline; /* Añade subrayado cuando se pasa el ratón */
+}
+
+/* Capa de fondo oscura con opacidad */
+body::before {
+    content: ""; /* Crea un pseudo-elemento vacío */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
+    top: 0; /* Colócalo en la parte superior */
+    left: 0; /* Colócalo en la parte izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa toda la altura */
+    background-color: rgba(0, 0, 0, 0.5); /* Capa de color negro con opacidad */
+    z-index: -1; /* Coloca la capa detrás del contenido principal */
+}
